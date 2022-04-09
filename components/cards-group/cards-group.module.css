@@ -1,0 +1,13 @@
+.headingGroup {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.heading {
+	margin: 0;
+
+	font-size: 24px;
+	line-height: normal;
+	font-weight: bold;
+}

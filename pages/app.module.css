@@ -1,0 +1,14 @@
+.app {
+	padding: 12px;
+}
+
+.heading {
+	margin: 0;
+
+	font-size: 36px;
+	line-height: normal;
+}
+
+.cardsGroup {
+	margin-top: 12px;
+}

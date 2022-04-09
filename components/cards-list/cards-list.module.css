@@ -1,0 +1,23 @@
+.list {
+	display: flex;
+	gap: 8px;
+	margin: 8px 0 0;
+	padding: 0;
+
+	overflow: auto;
+
+	list-style: none;
+}
+
+.article {
+	padding: 12px;
+	width: 300px;
+	min-height: 150px;
+
+	font-size: 20px;
+	font-weight: bold;
+	line-height: normal;
+
+	border: 1px solid black;
+	border-radius: 4px;
+}
