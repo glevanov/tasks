@@ -5,7 +5,7 @@ import { CardsGroup } from "~/components";
 import { CardsData } from "~types/cards";
 
 const mockData: CardsData = {
-	today: ['Feed the cat', 'Call mom', 'Maybe update CV?'],
+	today: ['Feed the cat. The cat is hungry. And when it is hungry it is out for blood. Seriously, just feed the damn cat. Is it really this difficult? Go grab some food from the cupboard. The cat will not be grateful, yet you will live to see another day.', 'Call mom', 'Maybe update CV?'],
 	tomorrow: [],
 	later: [],
 }
