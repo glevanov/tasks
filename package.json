@@ -1,6 +1,6 @@
 {
   "name": "tasks",
-  "description": "",
+  "description": "A simple task manager",
   "source": "public/index.html",
   "scripts": {
     "start": "parcel",
