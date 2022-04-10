@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 import * as styles from './cards-list.module.css'
 import { CardsEntry } from "~types/cards";
 
@@ -8,10 +10,13 @@ interface Props {
 export function CardsList({ list }: Props ) {
 	return (
 		<ul className={styles.list}>
-			{list.map((item) => (
+			{list.map((item, index) => (
 				<li key={item}>
 					<article
-						className={styles.article}
+						className={classNames(styles.article, {
+							[styles.first]: index === 0,
+							[styles.last]: index === list.length - 1
+						})}
 					>
 						{item}
 					</article>

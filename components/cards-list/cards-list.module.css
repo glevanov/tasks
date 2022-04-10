@@ -23,3 +23,11 @@
 
 	overflow: hidden;
 }
+
+.article.first {
+	margin-left: 12px;
+}
+
+.article.last {
+	margin-right: 12px;
+}

@@ -1,12 +1,24 @@
 .app {
-	padding: 12px;
+	--heading-height: 65px;
 }
 
 .heading {
+	height: var(--heading-height);
+	box-sizing: border-box;
 	margin: 0;
+	padding: 12px;
 
 	font-size: 36px;
 	line-height: normal;
+	color: white;
+
+	background-color: black;
+}
+
+.content {
+	box-sizing: border-box;
+	height: calc(100vh - var(--heading-height));
+	padding-top: 12px;
 }
 
 .cardsGroup {

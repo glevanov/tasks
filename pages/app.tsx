@@ -15,11 +15,12 @@ export function App () {
 		<div className={styles.app}>
 			<h1 className={styles.heading}>Tasks</h1>
 
-			<CardsGroup
-				className={styles.cardsGroup}
-				category={'today'}
-				list={mockData.today}
-			/>
+			<div className={styles.content}>
+				<CardsGroup
+					category={'today'}
+					list={mockData.today}
+				/>
+			</div>
 		</div>
 	)
 }
