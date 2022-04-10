@@ -18,7 +18,7 @@ export function CardsGroup({ category, list, className }: Props) {
 				<h2 className={styles.heading}>
 					{formatCategory(category)}
 				</h2>
-				<button>+</button>
+				<button className={styles.add}>Add</button>
 			</div>
 
 			<CardsList list={list} />

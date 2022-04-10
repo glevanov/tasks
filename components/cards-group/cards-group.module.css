@@ -11,3 +11,16 @@
 	line-height: normal;
 	font-weight: bold;
 }
+
+.add {
+	height: 28px;
+	box-sizing: border-box;
+	padding-left: 8px;
+	padding-right: 8px;
+
+	font-size: 18px;
+	line-height: normal;
+
+	background-color: white;
+	border: 1px solid black;
+}
