@@ -1,4 +1,4 @@
-export type Category = 'today' | 'tomorrow' | 'later'
+export type Category = 'today' | 'tomorrow' | 'future'
 
 export type CardsEntry = string
 
