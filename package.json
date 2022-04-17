@@ -5,6 +5,7 @@
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
+    "build:gh": "parcel build --public-url ./",
     "lint:tsc": "tsc",
     "new:component": "hygen component new"
   },
