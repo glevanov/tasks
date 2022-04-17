@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import * as styles from './cards-list.module.css'
+import * as styles from './cards-list.module.css';
 import { CardsEntry } from "../../types/cards";
 
 interface Props {
@@ -23,5 +23,5 @@ export function CardsList({ list }: Props ) {
 				</li>
 			))}
 		</ul>
-	)
+	);
 }

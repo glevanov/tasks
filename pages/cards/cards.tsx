@@ -1,12 +1,12 @@
 import { useStore } from "effector-react";
 
-import * as styles from './cards.module.css'
+import * as styles from './cards.module.css';
 
 import { CardsGroup } from "../../components";
 import { $cards } from "../../store/cards";
 
 export function Cards () {
-	const { today, tomorrow, future } = useStore($cards)
+	const { today, tomorrow, future } = useStore($cards);
 
 	return (
 		<div className={styles.cards}>
@@ -28,5 +28,5 @@ export function Cards () {
 				list={future}
 			/>
 		</div>
-	)
+	);
 }

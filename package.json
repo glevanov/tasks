@@ -7,6 +7,7 @@
     "build": "parcel build",
     "build:gh": "parcel build --public-url ./",
     "lint:tsc": "tsc",
+    "lint:eslint": "eslint . --ext .ts,.tsx --fix",
     "new:component": "hygen component new",
     "new:page": "hygen page new"
   },
@@ -27,6 +28,9 @@
   "devDependencies": {
     "@types/react": "18.0.5",
     "@types/react-dom": "18.0.1",
+    "@typescript-eslint/eslint-plugin": "5.19.0",
+    "@typescript-eslint/parser": "5.19.0",
+    "eslint": "8.13.0",
     "hygen": "6.2.0",
     "parcel": "2.4.1",
     "typescript": "4.6.3"

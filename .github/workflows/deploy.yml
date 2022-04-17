@@ -17,6 +17,9 @@ jobs:
       - name: Lint - Typescript
         run: npm run lint:tsc
 
+      - name: Lint - Eslint
+        run: npm run lint:eslint
+
       - name: Build
         run: npm run build:gh
 

@@ -1,9 +1,9 @@
 import { Route } from 'wouter'
 
-import "./global.css"
-import * as styles from './app.module.css'
-import { Cards } from './cards/cards'
-import { Add } from './add/add'
+import "./global.css";
+import * as styles from './app.module.css';
+import { Cards } from './cards/cards';
+import { Add } from './add/add';
 
 export function App () {
 	return (
@@ -15,5 +15,5 @@ export function App () {
 				<Route path={'/add'} component={Add} />
 			</div>
 		</div>
-	)
+	);
 }

@@ -4,7 +4,7 @@ import { CardsList } from "../../components";
 import { CardsEntry, Category } from "../../types/cards";
 import { addCard } from "../../store/cards";
 
-const formatCategory = (category: Category) => category[0].toUpperCase() + category.slice(1).toLowerCase()
+const formatCategory = (category: Category) => category[0].toUpperCase() + category.slice(1).toLowerCase();
 
 interface Props {
 	className?: string
@@ -29,5 +29,5 @@ export function CardsGroup({ category, list, className }: Props) {
 
 			<CardsList list={list} />
 		</section>
-	)
+	);
 }
