@@ -1,4 +1,4 @@
-import { Route } from 'wouter'
+import { Route } from 'wouter';
 
 import "./global.css";
 import * as styles from './app.module.css';
@@ -12,7 +12,9 @@ export function App () {
 
 			<div className={styles.content}>
 				<Route path={'/'} component={Cards} />
-				<Route path={'/add'} component={Add} />
+				<Route path={'/add/:category'}>
+					{params => <Add category={params.category} />}
+				</Route>
 			</div>
 		</div>
 	);

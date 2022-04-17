@@ -1,0 +1,20 @@
+.taskInput {
+	font-size: 24px;
+}
+
+.category {
+	font-weight: bold;
+}
+
+.textarea {
+	margin-top: 8px;
+	width: 100%;
+	box-sizing: border-box;
+
+	font-family: inherit;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: normal;
+
+	resize: none;
+}

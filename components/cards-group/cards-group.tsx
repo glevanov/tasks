@@ -1,8 +1,8 @@
 import * as styles from "./cards-group.module.css";
 
-import { CardsList } from "../../components";
+import { BaseButton, CardsList } from "../../components";
 import { CardsEntry, Category } from "../../types/cards";
-import { addCard } from "../../store/cards";
+import { useLocation } from "wouter";
 
 const formatCategory = (category: Category) => category[0].toUpperCase() + category.slice(1).toLowerCase();
 
@@ -13,18 +13,17 @@ interface Props {
 }
 
 export function CardsGroup({ category, list, className }: Props) {
+	const [location, setLocation] = useLocation();
+
 	return (
 		<section className={className}>
 			<div className={styles.headingGroup}>
 				<h2 className={styles.heading}>
 					{formatCategory(category)}
 				</h2>
-				<button
-					className={styles.add}
-					onClick={() => addCard({ category, text: 'Testing' })}
-				>
+				<BaseButton onClick={() => setLocation(`/add/${category}`)}>
 					Add
-				</button>
+				</BaseButton>
 			</div>
 
 			<CardsList list={list} />

@@ -1,0 +1,26 @@
+.button {
+	height: 28px;
+	box-sizing: border-box;
+	padding-left: 8px;
+	padding-right: 8px;
+
+	font-size: 18px;
+	line-height: normal;
+
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+
+.button:disabled {
+	color: #999;
+
+	cursor: not-allowed;
+}
+
+.button:focus:not(:disabled),
+.button:hover:not(:disabled) {
+	background-color: #cecece;
+
+	cursor: pointer;
+}
