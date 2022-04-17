@@ -6,8 +6,5 @@
     "skipLibCheck": true,
     "strict": true,
     "baseUrl": ".",
-    "paths": {
-      "~*": ["./*"]
-    }
   }
 }

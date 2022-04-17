@@ -18,11 +18,5 @@
 .content {
 	box-sizing: border-box;
 	height: calc(100vh - var(--heading-height));
-	padding-top: 12px;
-	padding-bottom: 12px;
 	overflow-y: auto;
-}
-
-.cardsGroup + .cardsGroup {
-	margin-top: 12px;
 }

@@ -9,7 +9,7 @@ interface Props {
 
 export function <%= h.changeCase.pascal(name) %>(props: Props) {
 	return (
-		<>
-		</>
+		<div>
+		</div>
 	)
 }

@@ -1,8 +1,8 @@
 import * as styles from "./cards-group.module.css";
 
-import { CardsList } from "~/components";
-import { CardsEntry, Category } from "~/types/cards";
-import { addCard } from "~/store/cards";
+import { CardsList } from "../../components";
+import { CardsEntry, Category } from "../../types/cards";
+import { addCard } from "../../store/cards";
 
 const formatCategory = (category: Category) => category[0].toUpperCase() + category.slice(1).toLowerCase()
 

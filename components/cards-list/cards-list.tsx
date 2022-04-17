@@ -1,7 +1,7 @@
 import classNames from "classnames";
 
 import * as styles from './cards-list.module.css'
-import { CardsEntry } from "~types/cards";
+import { CardsEntry } from "../../types/cards";
 
 interface Props {
 	list: CardsEntry[]
