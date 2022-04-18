@@ -1,9 +1,10 @@
-import { Route } from 'wouter';
+import {Route, Router} from 'wouter';
 
 import "./global.css";
 import * as styles from './app.module.css';
 import { Cards } from './cards/cards';
 import { Add } from './add/add';
+import {useHashLocation} from "../helpers/router";
 
 export function App () {
 	return (
@@ -11,10 +12,12 @@ export function App () {
 			<h1 className={styles.heading}>Tasks</h1>
 
 			<div className={styles.content}>
-				<Route path={'/'} component={Cards} />
-				<Route path={'/add/:category'}>
-					{params => <Add category={params.category} />}
-				</Route>
+				<Router hook={useHashLocation}>
+					<Route path={'/'} component={Cards} />
+					<Route path={'/add/:category'}>
+						{params => <Add category={params.category} />}
+					</Route>
+				</Router>
 			</div>
 		</div>
 	);

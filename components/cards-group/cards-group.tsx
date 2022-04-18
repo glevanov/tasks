@@ -2,7 +2,7 @@ import * as styles from "./cards-group.module.css";
 
 import { BaseButton, CardsList } from "../../components";
 import { CardsEntry, Category } from "../../types/cards";
-import { useLocation } from "wouter";
+import {useHashLocation} from "../../helpers/router";
 
 const formatCategory = (category: Category) => category[0].toUpperCase() + category.slice(1).toLowerCase();
 
@@ -13,7 +13,7 @@ interface Props {
 }
 
 export function CardsGroup({ category, list, className }: Props) {
-	const [location, setLocation] = useLocation();
+	const [, setLocation] = useHashLocation();
 
 	return (
 		<section className={className}>

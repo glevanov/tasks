@@ -3,7 +3,7 @@ import { Category } from "../../types/cards";
 import { BaseButton, TaskInput } from "../../components";
 import { addCard} from "../../store/cards";
 import { useState } from "react";
-import { useLocation } from "wouter";
+import {useHashLocation} from "../../helpers/router";
 
 const validateCategoryFromUrl = (category: string): Category => {
 	switch (category) {
@@ -25,7 +25,7 @@ interface Props {
 export function Add({ category }: Props) {
 	const validatedCategory =  validateCategoryFromUrl(category);
 	const [text, setText] = useState('');
-	const [location, setLocation] = useLocation();
+	const [, setLocation] = useHashLocation();
 
 	const onAdd = () => {
 		addCard({
