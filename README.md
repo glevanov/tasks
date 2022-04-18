@@ -3,7 +3,7 @@
 
 Deployed at: https://glevanov.github.io/tasks/
 
-### Prgogression
+### Progression
 * ✅ scaffold project
 * ✅ add basic mobile design
 * ✅ add store
