@@ -1,9 +1,11 @@
-import * as styles from "./add.module.css";
-import { Category } from "../../types/cards";
-import { BaseButton, TaskInput } from "../../components";
-import { addCard} from "../../store/cards";
-import { useState } from "react";
-import {useHashLocation} from "../../helpers/router";
+import { useState } from 'react';
+
+import { Category } from '../../types/cards';
+import { BaseButton, TaskInput } from '../../components';
+import { addCard } from '../../store/cards';
+import { useHashLocation } from '../../helpers/router';
+
+import * as styles from './add.module.css';
 
 const validateCategoryFromUrl = (category: string): Category => {
 	switch (category) {
@@ -23,7 +25,7 @@ interface Props {
 }
 
 export function Add({ category }: Props) {
-	const validatedCategory =  validateCategoryFromUrl(category);
+	const validatedCategory = validateCategoryFromUrl(category);
 	const [text, setText] = useState('');
 	const [, setLocation] = useHashLocation();
 
@@ -31,9 +33,9 @@ export function Add({ category }: Props) {
 		addCard({
 			category: validatedCategory,
 			text,
-		})
-		setLocation('/')
-	}
+		});
+		setLocation('/');
+	};
 
 	return (
 		<div className={styles.add}>

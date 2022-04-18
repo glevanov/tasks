@@ -1,8 +1,9 @@
-import * as styles from "./cards-group.module.css";
 
-import { BaseButton, CardsList } from "../../components";
-import { CardsEntry, Category } from "../../types/cards";
-import {useHashLocation} from "../../helpers/router";
+import { BaseButton, CardsList } from '../../components';
+import { CardsEntry, Category } from '../../types/cards';
+import { useHashLocation } from '../../helpers/router';
+
+import * as styles from './cards-group.module.css';
 
 const formatCategory = (category: Category) => category[0].toUpperCase() + category.slice(1).toLowerCase();
 

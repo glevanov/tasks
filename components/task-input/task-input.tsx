@@ -1,5 +1,6 @@
-import * as styles from "./task-input.module.css";
-import { Category } from "../../types/cards";
+import { Category } from '../../types/cards';
+
+import * as styles from './task-input.module.css';
 
 interface Props {
 	category: Category

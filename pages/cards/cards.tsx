@@ -1,9 +1,9 @@
-import { useStore } from "effector-react";
+import { useStore } from 'effector-react';
+
+import { CardsGroup } from '../../components';
+import { $cards } from '../../store/cards';
 
 import * as styles from './cards.module.css';
-
-import { CardsGroup } from "../../components";
-import { $cards } from "../../store/cards";
 
 export function Cards () {
 	const { today, tomorrow, future } = useStore($cards);

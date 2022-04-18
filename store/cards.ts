@@ -1,12 +1,12 @@
-import { createEvent, createStore } from "effector";
+import { createEvent, createStore } from 'effector';
 
-import { CardsData, Category } from "../types/cards";
+import { CardsData, Category } from '../types/cards';
 
-type AddCardPayload = { text: string; category: Category }
-type DeleteCardPayload = { text: string; category: Category }
+type AddCardPayload = { text: string; category: Category };
+type DeleteCardPayload = { text: string; category: Category };
 
 export const addCard = createEvent<AddCardPayload>();
-const handleAddCard = (state: CardsData, { text, category}: AddCardPayload ): CardsData => ({
+const handleAddCard = (state: CardsData, { text, category }: AddCardPayload ): CardsData => ({
 	...state,
 	[category]: [...state[category], text],
 });

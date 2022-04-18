@@ -1,10 +1,11 @@
-import {Route, Router} from 'wouter';
+import { Route, Router } from 'wouter';
 
-import "./global.css";
+import './global.css';
+import { useHashLocation } from '../helpers/router';
+
 import * as styles from './app.module.css';
 import { Cards } from './cards/cards';
 import { Add } from './add/add';
-import {useHashLocation} from "../helpers/router";
 
 export function App () {
 	return (
@@ -15,7 +16,7 @@ export function App () {
 				<Router hook={useHashLocation}>
 					<Route path={'/'} component={Cards} />
 					<Route path={'/add/:category'}>
-						{params => <Add category={params.category} />}
+						{(params) => <Add category={params.category} />}
 					</Route>
 				</Router>
 			</div>

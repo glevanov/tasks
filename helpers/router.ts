@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from 'react';
 
 // returns the current hash location in a normalized form
 // (excluding the leading '#' symbol)
 const currentLocation = () => {
-	return window.location.hash.replace(/^#/, "") || "/";
+	return window.location.hash.replace(/^#/, '') || '/';
 };
 
 const navigate = (to: string) => (window.location.hash = to);
@@ -17,8 +17,8 @@ export const useHashLocation = (): [string, (to: string) => string] => {
 		const handler = () => setLoc(currentLocation());
 
 		// subscribe to hash changes
-		window.addEventListener("hashchange", handler);
-		return () => window.removeEventListener("hashchange", handler);
+		window.addEventListener('hashchange', handler);
+		return () => window.removeEventListener('hashchange', handler);
 	}, []);
 
 	return [loc, navigate];
