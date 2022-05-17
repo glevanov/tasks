@@ -16,6 +16,7 @@ export function BaseButton({ children, className, onClick, disabled }: Props) {
 			className={classNames(styles.button, className)}
 			onClick={onClick}
 			disabled={disabled}
+			data-testid={'base-button'}
 		>
 			{children}
 		</button>
