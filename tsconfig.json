@@ -5,6 +5,9 @@
     "noImplicitAny": true,
     "skipLibCheck": true,
     "strict": true,
-    "baseUrl": ".",
+    "baseUrl": "."
+  },
+  "ts-node": {
+    "files": true
   }
 }

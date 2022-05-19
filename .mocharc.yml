@@ -1,0 +1,4 @@
+require:
+  - global-jsdom/register
+  - ts-node/register
+  - ignore-styles
