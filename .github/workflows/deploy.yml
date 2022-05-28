@@ -11,23 +11,34 @@ jobs:
       - name: Checkout️
         uses: actions/checkout@v3
 
-      - name: Install
-        run: npm ci
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Lint - Typescript
-        run: npm run lint:tsc
+        run: pnpm lint:tsc
 
       - name: Lint - Eslint
-        run: npm run lint:eslint
+        run: pnpm lint:eslint
 
       - name: Lint - Stylelint
-        run: npm run lint:stylelint
+        run: pnpm lint:stylelint
 
       - name: Test - Unit
-        run: npm run test:unit
+        run: pnpm test:unit
 
       - name: Build
-        run: npm run build:gh
+        run: pnpm build:gh
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.0

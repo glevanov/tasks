@@ -92,3 +92,5 @@ rules:
 settings:
   react:
     version: detect
+  import/ignore:
+    - node_modules

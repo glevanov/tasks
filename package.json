@@ -6,13 +6,13 @@
     "start": "parcel",
     "build": "parcel build",
     "build:gh": "parcel build --public-url ./",
-    "lint:tsc": "tsc",
+    "lint:tsc": "tsc --noEmit",
     "lint:eslint": "eslint . --ext .ts,.tsx --fix",
     "lint:stylelint": "stylelint '**/*.css' --fix",
     "new:component": "hygen component new",
     "new:page": "hygen page new",
     "test:unit": "mocha './**/*.test.tsx'",
-    "postinstall": "npx simple-git-hooks"
+    "postinstall": "simple-git-hooks"
   },
   "repository": {
     "type": "git",

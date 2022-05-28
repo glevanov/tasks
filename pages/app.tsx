@@ -16,7 +16,7 @@ export function App () {
 				<Router hook={useHashLocation}>
 					<Route path={'/'} component={Cards} />
 					<Route path={'/add/:category'}>
-						{(params) => <Add category={params.category} />}
+						{(params: { category: string; }) => <Add category={params.category} />}
 					</Route>
 				</Router>
 			</div>
