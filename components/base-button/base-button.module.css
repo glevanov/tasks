@@ -1,27 +1,30 @@
 .button {
-	height: 28px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	box-sizing: border-box;
-	padding-left: 8px;
-	padding-right: 8px;
+	padding: 4px 10px;
 
+	color: #ffffff;
 	font-family: inherit;
-	font-size: 18px;
-	line-height: normal;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 600;
 
-	background-color: white;
-	border: 1px solid black;
-	border-radius: 4px;
+	background-color: #5100E8;
+	border: none;
+	border-radius: 7px;
 }
 
 .button:disabled {
-	color: #999;
+	background-color: #9E9E9E;
 
 	cursor: not-allowed;
 }
 
 .button:focus:not(:disabled),
 .button:hover:not(:disabled) {
-	background-color: #cecece;
+	background-color: #7d40f2;
 
 	cursor: pointer;
 }
