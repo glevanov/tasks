@@ -3,6 +3,7 @@
 	gap: 18px;
 	margin: 12px 0 -8px;
 	padding: 0 0 8px;
+	width: 100vw;
 
 	overflow: auto;
 
@@ -10,8 +11,11 @@
 }
 
 .article {
+	--card-padding: 18px;
+	position: relative;
+
 	box-sizing: border-box;
-	padding: 18px;
+	padding: var(--card-padding);
 	width: 250px;
 	height: 150px;
 
@@ -24,6 +28,19 @@
 	border-radius: 16px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
+}
+
+.article::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	height: var(--card-padding);
+
+	background: linear-gradient(to bottom, transparent, #FFFFFF);
+
+	content: "";
 }
 
 .article.first {

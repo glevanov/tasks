@@ -18,7 +18,7 @@ const handleDeleteCard = (state: CardsData, { text, category }: DeleteCardPayloa
 });
 
 export const $cards = createStore<CardsData>({
-	today: ['Feed the cat. The cat is hungry. And when it is hungry it is out for blood. Seriously, just feed the damn cat. Is it really this difficult? Go grab some food from the cupboard. The cat will not be grateful, yet you will live to see another day.', 'Call mom', 'Maybe update CV?'],
+	today: ['Feed the cat. Let the bowl overflow with food just as this card text does. The cat is hungry, and a hungry cat is never a happy cat.', 'Call mom', 'Maybe update CV?'],
 	tomorrow: ['Dentist at 09:30, Arbatskaya'],
 	future: ['Visit Stockholm', 'Get some rest'],
 })
