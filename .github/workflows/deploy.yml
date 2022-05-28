@@ -23,6 +23,9 @@ jobs:
       - name: Lint - Stylelint
         run: npm run lint:stylelint
 
+      - name: Test - Unit
+        run: npm run test:unit
+
       - name: Build
         run: npm run build:gh
 
