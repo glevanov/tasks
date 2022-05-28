@@ -9,6 +9,6 @@ describe('BaseButton', () => {
 	it('should render correct tag', () => {
 		render(<BaseButton>Text</BaseButton>);
 		const element = screen.getByTestId('base-button');
-		expect(element.tagName).to.equal('div');
+		expect(element.tagName).to.equal('BUTTON');
 	});
 });
