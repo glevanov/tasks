@@ -20,6 +20,9 @@ jobs:
       - name: Lint - Eslint
         run: npm run lint:eslint
 
+      - name: Lint - Stylelint
+        run: npm run lint:stylelint
+
       - name: Build
         run: npm run build:gh
 

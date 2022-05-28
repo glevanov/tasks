@@ -8,9 +8,11 @@
     "build:gh": "parcel build --public-url ./",
     "lint:tsc": "tsc",
     "lint:eslint": "eslint . --ext .ts,.tsx --fix",
+    "lint:stylelint": "stylelint '**/*.css' --fix",
     "new:component": "hygen component new",
     "new:page": "hygen page new",
-    "test:unit": "mocha './**/*.test.tsx'"
+    "test:unit": "mocha './**/*.test.tsx'",
+    "postinstall": "npx simple-git-hooks"
   },
   "repository": {
     "type": "git",
@@ -45,6 +47,11 @@
     "jsdom": "19.0.0",
     "mocha": "10.0.0",
     "parcel": "2.5.0",
+    "simple-git-hooks": "2.7.0",
+    "stylelint": "14.8.5",
+    "stylelint-config-rational-order": "0.1.2",
+    "stylelint-config-standard": "25.0.0",
+    "stylelint-order": "5.0.0",
     "ts-node": "10.7.0",
     "typescript": "4.6.4"
   }

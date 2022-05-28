@@ -1,10 +1,9 @@
 .list {
 	display: flex;
 	gap: 18px;
+	width: 100vw;
 	margin: 12px 0 -8px;
 	padding: 0 0 8px;
-	width: 100vw;
-
 	overflow: auto;
 
 	list-style: none;
@@ -12,22 +11,23 @@
 
 .article {
 	--card-padding: 18px;
+
 	position: relative;
 
 	box-sizing: border-box;
-	padding: var(--card-padding);
 	width: 250px;
 	height: 150px;
+	padding: var(--card-padding);
+	overflow: hidden;
 
+	font-weight: 300;
 	font-size: 20px;
 	line-height: 24px;
-	font-weight: 300;
 
-	background-color: #FFFFFF;
-	border: 1px solid #EAEAEA;
+	background-color: #ffffff;
+	border: 1px solid #eaeaea;
 	border-radius: 16px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
+	box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
 }
 
 .article::after {
@@ -38,7 +38,7 @@
 	width: 100%;
 	height: var(--card-padding);
 
-	background: linear-gradient(to bottom, transparent, #FFFFFF);
+	background: linear-gradient(to bottom, transparent, #ffffff);
 
 	content: "";
 }

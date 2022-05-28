@@ -3,16 +3,16 @@
 }
 
 .heading {
-	height: var(--heading-height);
 	box-sizing: border-box;
+	height: var(--heading-height);
 	margin: 0;
 	padding: 12px;
 
+	color: #ffffff;
 	font-size: 36px;
 	line-height: 42px;
-	color: #FFFFFF;
 
-	background-color: #5100E8;
+	background-color: #5100e8;
 }
 
 .content {

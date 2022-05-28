@@ -1,0 +1,4 @@
+{
+  "pre-commit": "npm run lint:eslint && npm run lint:tsc && npm run lint:stylelint",
+  "pre-push": "npm run test:unit"
+}
