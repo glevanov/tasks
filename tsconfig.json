@@ -5,7 +5,8 @@
     "noImplicitAny": true,
     "skipLibCheck": true,
     "strict": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "lib": ["ESNext", "dom"]
   },
   "ts-node": {
     "files": true
