@@ -9,44 +9,10 @@
 	list-style: none;
 }
 
-.article {
-	--card-padding: 18px;
-
-	position: relative;
-
-	box-sizing: border-box;
-	width: 250px;
-	height: 150px;
-	padding: var(--card-padding);
-	overflow: hidden;
-
-	font-weight: 300;
-	font-size: 20px;
-	line-height: 24px;
-
-	background-color: #ffffff;
-	border: 1px solid #eaeaea;
-	border-radius: 16px;
-	box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
-}
-
-.article::after {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-
-	width: 100%;
-	height: var(--card-padding);
-
-	background: linear-gradient(to bottom, transparent, #ffffff);
-
-	content: "";
-}
-
-.article.first {
+.first {
 	margin-left: 12px;
 }
 
-.article.last {
+.last {
 	margin-right: 12px;
 }
