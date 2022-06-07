@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 
 import { CardsEntry } from '../../types/cards';
+import { moveToCard } from '../../store/cards/move-to-card';
 
 import * as styles from './task-card.module.css';
 
@@ -9,34 +10,32 @@ interface Props {
 	className?: string
 }
 
-const handleDragOver = (evt: React.DragEvent<HTMLElement>) => {
+const handleDragOver = (evt: React.DragEvent<HTMLElement>, card: CardsEntry) => {
 	evt.preventDefault();
-	// ставим стили на ховер карточкой - подсветка на который вставляем задачу
+	evt.dataTransfer.dropEffect = 'move';
 	const target = evt.target as HTMLElement | undefined;
+	const targetId = evt.dataTransfer?.getData('id');
+	if (card.id === targetId) return;
 	target?.classList.add(styles.dragOver);
 };
 
-const handleDragLeave = (evt: React.DragEvent<HTMLElement>) => {
-	// очищаем стили на ховер карточкой
-	const target = evt.target as HTMLElement | undefined;
-	target?.classList.remove(styles.dragOver);
-};
-
-const handleDragEnd = (evt: React.DragEvent<HTMLElement>) => {
-	// очищаем стили здесь тоже зачем-то (???)
+const clearDragOverStyles = (evt: React.DragEvent<HTMLElement>) => {
 	const target = evt.target as HTMLElement | undefined;
 	target?.classList.remove(styles.dragOver);
 };
 
 const handleDragStart = (evt: React.DragEvent<HTMLElement>, id: string) => {
-	// сохраняем здесь текущую доску и задачу
 	evt.dataTransfer?.setData('id', id);
 	evt.dataTransfer.dropEffect = 'copy';
 };
 
 const handleDrop = (evt: React.DragEvent<HTMLElement>, card: CardsEntry, id: string) => {
 	evt.preventDefault();
-	// удаляем в старом месте и вставляем в новом
+	const draggedId = evt.dataTransfer.getData('id');
+	moveToCard({
+		id: draggedId,
+		targetId: id,
+	});
 };
 
 export function TaskCard({ card, className }: Props) {
@@ -46,10 +45,10 @@ export function TaskCard({ card, className }: Props) {
 		<article
 			className={classNames(styles.article, className)}
 			draggable
-			onDragOver={(evt) => handleDragOver(evt)}
-			onDragLeave={(evt) => handleDragLeave(evt)}
+			onDragOver={(evt) => handleDragOver(evt, card)}
+			onDragLeave={clearDragOverStyles}
 			onDragStart={(evt) => handleDragStart(evt, id)}
-			onDragEnd={(evt) => handleDragEnd(evt)}
+			onDragEnd={clearDragOverStyles}
 			onDrop={(evt) => handleDrop(evt, card, id)}
 		>
 			{text}

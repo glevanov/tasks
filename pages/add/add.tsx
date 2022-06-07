@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Category } from '../../types/cards';
 import { BaseButton, TaskInput } from '../../components';
-import { addCard } from '../../store/cards';
+import { addCard } from '../../store/cards/add-card';
 import { useHashLocation } from '../../helpers/router';
 
 import * as styles from './add.module.css';

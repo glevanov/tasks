@@ -1,12 +1,12 @@
-import { useStore } from 'effector-react';
+import { useStore } from '@nanostores/react';
 
 import { CardsGroup } from '../../components';
-import { $cards } from '../../store/cards';
+import { cards } from '../../store/cards';
 
 import * as styles from './cards.module.css';
 
 export function Cards () {
-	const { today, tomorrow, future } = useStore($cards);
+	const { today, tomorrow, future } = useStore(cards);
 
 	return (
 		<div className={styles.cards}>
