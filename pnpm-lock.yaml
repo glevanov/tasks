@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@nanostores/react': 0.2.0
   '@testing-library/react': 13.2.0
   '@types/chai': 4.3.1
   '@types/mocha': 9.1.1
@@ -11,6 +10,8 @@ specifiers:
   '@typescript-eslint/parser': 5.24.0
   chai: 4.3.6
   classnames: 2.3.1
+  effector: 22.3.0
+  effector-react: 22.0.6
   eslint: 8.15.0
   eslint-plugin-compat: 4.0.2
   eslint-plugin-import: 2.26.0
@@ -21,7 +22,6 @@ specifiers:
   jsdom: 19.0.0
   mocha: 10.0.0
   nanoid: 3.3.4
-  nanostores: 0.5.12
   parcel: 2.5.0
   react: 18.1.0
   react-dom: 18.1.0
@@ -35,10 +35,10 @@ specifiers:
   wouter: 2.7.5
 
 dependencies:
-  '@nanostores/react': 0.2.0_ib7jseorxmnfrhevtrqzsp5cr4
   classnames: 2.3.1
+  effector: 22.3.0
+  effector-react: 22.0.6_gecyk3vfkfeqajzxldjp6ame5i
   nanoid: 3.3.4
-  nanostores: 0.5.12
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   wouter: 2.7.5_react@18.1.0
@@ -390,19 +390,6 @@ packages:
       call-me-maybe: 1.0.1
       glob-to-regexp: 0.3.0
     dev: true
-
-  /@nanostores/react/0.2.0_ib7jseorxmnfrhevtrqzsp5cr4:
-    resolution: {integrity: sha512-8kR6Ke8KAacAuBvodGrMNtLof8xF44WkfqtWWMZffP0TZsXEePdIWEQ6MDmCvVzbFAwOKvF71YjVAJ660NYCAw==}
-    engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
-    peerDependencies:
-      nanostores: ^0.5.2
-      react: '>=18.0.0'
-      react-dom: '>=18.0.0'
-    dependencies:
-      nanostores: 0.5.12
-      react: 18.1.0
-      react-dom: 18.1.0_react@18.1.0
-    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2523,6 +2510,22 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /effector-react/22.0.6_gecyk3vfkfeqajzxldjp6ame5i:
+    resolution: {integrity: sha512-uzVjrh5S94eMeihu8N8eQvLFnZA56VT00etMVovnSyZxujo0f8gtZZebIYOKyYFkGcYUyfiOHRRzBhYpIfAIhg==}
+    engines: {node: '>=11.0.0'}
+    peerDependencies:
+      effector: ^22.0.2
+      react: '>=16.8.0 <19.0.0'
+    dependencies:
+      effector: 22.3.0
+      react: 18.1.0
+    dev: false
+
+  /effector/22.3.0:
+    resolution: {integrity: sha512-Nh7IXn8U4emq8YtAZf2+y2Rs6n4W/gjPaNZpZLFOXOIAsRZSNBFjtK1vHTWNKxxmNFZOaZN6XUXdT8FDs0mAdQ==}
+    engines: {node: '>=11.0.0'}
+    dev: false
+
   /ejs/3.1.6:
     resolution: {integrity: sha512-9lt9Zse4hPucPkoP7FHDF0LQAlGyF9JVpnClFLFH3aSSbxmyoqINRpp/9wePWJTUl4KOQwRL72Iw3InHPDkoGw==}
     engines: {node: '>=0.10.0'}
@@ -4638,11 +4641,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /nanostores/0.5.12:
-    resolution: {integrity: sha512-5BccS7nNInTc7Noz2gv19gyx5h5y6m72nj6ZnCTV98GdFdwvcFJf2MMl+7VsX76E1toV1YrLqlDn+R+OF73PVg==}
-    engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
-    dev: false
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}

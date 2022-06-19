@@ -1,7 +1,11 @@
 import { nanoid } from 'nanoid';
-import { atom } from 'nanostores';
+import { createStore } from 'effector';
 
 import { CardsData } from '../../types/cards';
+
+import { addCard, handleAddCard } from './add-card';
+import { moveToCategory, handleMoveToCategory } from './move-to-category';
+import { moveToCard, handleMoveToCard } from './move-to-card';
 
 const mockState: CardsData = {
 	today: [
@@ -18,4 +22,7 @@ const mockState: CardsData = {
 	],
 };
 
-export const cards = atom<CardsData>(mockState);
+export const $cards = createStore<CardsData>(mockState)
+	.on(addCard, handleAddCard)
+	.on(moveToCard, handleMoveToCard)
+	.on(moveToCategory, handleMoveToCategory);

@@ -1,19 +1,15 @@
 import { nanoid } from 'nanoid';
-import { action } from 'nanostores';
+import { createEvent } from 'effector';
 
-import { Category } from '../../types/cards';
-
-import { cards } from './index';
+import { CardsData, Category } from '../../types/cards';
 
 export type AddCardPayload = { text: string; category: Category };
+export const addCard = createEvent<AddCardPayload>();
 
-export const addCard = action(cards, 'addCard', (store, { text, category }: AddCardPayload) => {
-	store.set({
-		...store.get(),
-		[category]: [...store.get()[category], {
-			id: nanoid(),
-			text,
-		}],
-	});
-	return store.get();
+export const handleAddCard = (state: CardsData, { text, category }: AddCardPayload ): CardsData => ({
+	...state,
+	[category]: [state[category], {
+		id: nanoid(),
+		text,
+	}],
 });

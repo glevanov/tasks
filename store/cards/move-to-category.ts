@@ -1,24 +1,22 @@
-import { action } from 'nanostores';
+import { createEvent } from 'effector';
 
-import { Category } from '../../types/cards';
+import { CardsData, Category } from '../../types/cards';
 
 import { deleteByIndex, getCardData } from './helpers';
 
-import { cards } from './index';
-
 export type MoveToCategoryPayload = { id: string; targetCategory: Category };
+export const moveToCategory = createEvent<MoveToCategoryPayload>();
 
-export const moveToCategory = action(cards, 'moveToCategory', (store, { id, targetCategory }: MoveToCategoryPayload) => {
-	const currentData = getCardData(store.get(), id);
+export const handleMoveToCategory = (state: CardsData, { id, targetCategory }: MoveToCategoryPayload): CardsData => {
+	const currentData = getCardData(state, id);
 
-	if (currentData === null) return store.get();
+	if (currentData === null) return state;
 
 	const { category: oldCategory, card, index } = currentData;
 
-	store.set({
-		...store.get(),
-		[targetCategory]: [...store.get()[targetCategory], card],
-		[oldCategory]: deleteByIndex(store.get()[oldCategory], index),
-	});
-	return store.get();
-});
+	return {
+		...state,
+		[targetCategory]: [state[targetCategory], card],
+		[oldCategory]: deleteByIndex(state[oldCategory], index),
+	};
+};
