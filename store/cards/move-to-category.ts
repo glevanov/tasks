@@ -16,7 +16,7 @@ export const handleMoveToCategory = (state: CardsData, { id, targetCategory }: M
 
 	return {
 		...state,
-		[targetCategory]: [state[targetCategory], card],
+		[targetCategory]: [...state[targetCategory], card],
 		[oldCategory]: deleteByIndex(state[oldCategory], index),
 	};
 };

@@ -8,7 +8,7 @@ export const addCard = createEvent<AddCardPayload>();
 
 export const handleAddCard = (state: CardsData, { text, category }: AddCardPayload ): CardsData => ({
 	...state,
-	[category]: [state[category], {
+	[category]: [...state[category], {
 		id: nanoid(),
 		text,
 	}],
