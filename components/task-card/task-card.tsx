@@ -12,6 +12,7 @@ interface Props {
 
 const handleDragOver = (evt: React.DragEvent<HTMLElement>, card: CardsEntry) => {
 	evt.preventDefault();
+	evt.stopPropagation();
 	evt.dataTransfer.dropEffect = 'move';
 	const target = evt.target as HTMLElement | undefined;
 	const targetId = evt.dataTransfer?.getData('id');
@@ -31,6 +32,7 @@ const handleDragStart = (evt: React.DragEvent<HTMLElement>, id: string) => {
 
 const handleDrop = (evt: React.DragEvent<HTMLElement>, card: CardsEntry, id: string) => {
 	evt.preventDefault();
+	evt.stopPropagation();
 	const draggedId = evt.dataTransfer.getData('id');
 	moveToCard({
 		id: draggedId,

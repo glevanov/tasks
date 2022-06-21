@@ -11,11 +11,13 @@ const formatCategory = (category: Category) => category[0].toUpperCase() + categ
 
 const handleDragOver = (evt: DragEvent) => {
 	evt.preventDefault();
+	evt.stopPropagation();
 	evt.dataTransfer.dropEffect = 'move';
 };
 
 const handleDrop = (evt: DragEvent, category: Category) => {
 	evt.preventDefault();
+	evt.stopPropagation();
 	const id = evt.dataTransfer.getData('id');
 	moveToCategory({ id, targetCategory: category });
 };
