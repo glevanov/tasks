@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import { CardsEntry } from '../../types/cards';
+import type { CardsEntry } from '../../types/cards';
 import { TaskCard } from '../task-card/task-card';
 
 import * as styles from './cards-list.module.css';

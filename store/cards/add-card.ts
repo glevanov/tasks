@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 import { createEvent } from 'effector';
 
-import { CardsData, Category } from '../../types/cards';
+import type { CardsData, Category } from '../../types/cards';
 
 export type AddCardPayload = { text: string; category: Category };
 export const addCard = createEvent<AddCardPayload>();

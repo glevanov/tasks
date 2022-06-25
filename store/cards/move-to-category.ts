@@ -1,6 +1,6 @@
 import { createEvent } from 'effector';
 
-import { CardsData, Category } from '../../types/cards';
+import type { CardsData, Category } from '../../types/cards';
 
 import { deleteByIndex, getCardData } from './helpers';
 

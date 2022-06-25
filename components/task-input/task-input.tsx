@@ -1,4 +1,4 @@
-import { Category } from '../../types/cards';
+import type { Category } from '../../types/cards';
 
 import * as styles from './task-input.module.css';
 

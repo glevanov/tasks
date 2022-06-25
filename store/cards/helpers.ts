@@ -1,4 +1,4 @@
-import { CardsData, CardsEntry, Category } from '../../types/cards';
+import type { CardsData, CardsEntry, Category } from '../../types/cards';
 
 export const getCardData = (state: CardsData, id: string) => {
 	let category: Category | null = null;

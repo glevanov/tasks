@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 import { createStore } from 'effector';
 
-import { CardsData } from '../../types/cards';
+import type { CardsData } from '../../types/cards';
 
 import { addCard, handleAddCard } from './add-card';
 import { moveToCategory, handleMoveToCategory } from './move-to-category';
