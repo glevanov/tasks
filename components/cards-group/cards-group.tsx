@@ -1,6 +1,6 @@
 import type { DragEvent } from 'react';
 
-import { BaseButton, CardsList } from '../../components';
+import { AddCard, BaseButton, CardsList } from '../../components';
 import type { CardsEntry, Category } from '../../types/cards';
 import { useHashLocation } from '../../helpers/router';
 import { moveToCategory } from '../../store/cards/move-to-category';
@@ -30,6 +30,7 @@ interface Props {
 
 export function CardsGroup({ category, list, className }: Props) {
 	const [, setLocation] = useHashLocation();
+	const addCard = () => setLocation(`/add/${category}`);
 
 	return (
 		<section
@@ -41,12 +42,12 @@ export function CardsGroup({ category, list, className }: Props) {
 				<h2 className={styles.heading}>
 					{formatCategory(category)}
 				</h2>
-				<BaseButton onClick={() => setLocation(`/add/${category}`)}>
+				<BaseButton onClick={addCard}>
 					Add
 				</BaseButton>
 			</div>
 
-			<CardsList list={list} />
+			{list.length ? <CardsList list={list} /> : <AddCard onClick={addCard}/>}
 		</section>
 	);
 }

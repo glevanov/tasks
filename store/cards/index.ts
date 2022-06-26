@@ -14,11 +14,12 @@ const mockState: CardsData = {
 		{ id: nanoid(), text: 'Maybe update CV?' },
 	],
 	tomorrow: [
-		{ id: nanoid(), text: 'Dentist at 09:30, Arbatskaya' },
+
 	],
 	future: [
 		{ id: nanoid(), text: 'Visit Stockholm' },
 		{ id: nanoid(), text: 'Get some rest' },
+		{ id: nanoid(), text: 'Dentist at 09:30, Arbatskaya' },
 	],
 };
 

@@ -1,0 +1,26 @@
+/* add-card */
+.card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 250px;
+	height: 150px;
+	margin-top: 12px;
+	margin-left: 12px;
+
+	background-color: #ffffff;
+	border: 1px solid #eaeaea;
+	border-radius: 16px;
+	box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+
+	cursor: pointer;
+
+	transition: border-color linear 0.2s;
+}
+
+.card:hover,
+.card:focus,
+.dragOver {
+	border-color: #5100e8;
+}
