@@ -29,6 +29,7 @@
     "wouter": "2.7.5"
   },
   "devDependencies": {
+    "@glevanov/eslint-config": "1.0.1",
     "@testing-library/react": "13.3.0",
     "@types/chai": "4.3.1",
     "@types/mocha": "9.1.1",

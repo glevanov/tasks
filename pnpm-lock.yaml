@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@glevanov/eslint-config': 1.0.1
   '@testing-library/react': 13.3.0
   '@types/chai': 4.3.1
   '@types/mocha': 9.1.1
@@ -45,6 +46,7 @@ dependencies:
   wouter: 2.7.5_react@18.2.0
 
 devDependencies:
+  '@glevanov/eslint-config': 1.0.1
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
   '@types/chai': 4.3.1
   '@types/mocha': 9.1.1
@@ -375,6 +377,10 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@glevanov/eslint-config/1.0.1:
+    resolution: {integrity: sha512-caFuHgDIDW7KD/84lWxLLdE94rQ4eMgnQ6QBeDPywgvfNnbZ0cRdv5IyA+73f+zbvbgu4Y7m6Yf0oQ7SWtKHEw==}
     dev: true
 
   /@humanwhocodes/config-array/0.9.5:
