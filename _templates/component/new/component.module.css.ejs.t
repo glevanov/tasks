@@ -1,4 +1,4 @@
 ---
-to: components/<%= name %>/<%= name %>.module.css
+to: <%= target %>/<%= name %>/<%= name %>.module.css
 ---
 /* <%= name %> */

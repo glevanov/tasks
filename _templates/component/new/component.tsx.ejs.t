@@ -1,5 +1,5 @@
 ---
-to: components/<%= name %>/<%= name %>.tsx
+to: <%= target %>/<%= name %>/<%= name %>.tsx
 ---
 import * as styles from "./<%= name %>.module.css";
 

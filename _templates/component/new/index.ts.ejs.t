@@ -1,6 +1,6 @@
 ---
 inject: true
-to: components/index.ts
+to: <%= target %>/index.ts
 append: true
 unless_exists: true
 ---

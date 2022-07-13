@@ -8,7 +8,8 @@
     "lint:tsc": "tsc --noEmit",
     "lint:eslint": "eslint . --ext .ts,.tsx --fix",
     "lint:stylelint": "stylelint '**/*.css' --fix",
-    "new:component": "hygen component new",
+    "new:component": "hygen component new --target component",
+    "new:component:ui": "hygen component new --target ui",
     "new:page": "hygen page new",
     "test:unit": "mocha './**/*.test.?(ts|tsx)'",
     "postinstall": "simple-git-hooks"
