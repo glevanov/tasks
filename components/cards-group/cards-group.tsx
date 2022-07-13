@@ -1,6 +1,7 @@
 import type { DragEvent } from 'react';
 
-import { AddCard, BaseButton, CardsList } from '../../components';
+import { AddCard, CardsList } from '../../components';
+import { BaseButton } from '../../ui';
 import type { CardsEntry, Category } from '../../types/cards';
 import { useHashLocation } from '../../helpers/router';
 import { moveToCategory } from '../../store/cards/move-to-category';

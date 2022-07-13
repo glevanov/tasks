@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
 import type { Category } from '../../types/cards';
-import { BaseButton, TaskInput } from '../../components';
+import { TaskInput } from '../../components';
+import { BaseButton } from '../../ui';
 import { addCard } from '../../store/cards/add-card';
 import { useHashLocation } from '../../helpers/router';
 
