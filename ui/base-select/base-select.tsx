@@ -19,13 +19,15 @@ export function BaseSelect<Value extends AllowedValue>(props: Props<Value>) {
 	return (
 		<label>
 			{props.label || null}
-			<select>
-				{Boolean(props.placeholder) && <option value={''}>{props.placeholder}</option>}
+			<select
+				value={props.selected}
+				onChange={props.onChange}
+			>
+				{props.placeholder !== undefined && <option value={''}>{props.placeholder}</option>}
 				{props.options.map((option) => (
 					<option
 						key={option.value}
 						value={option.value}
-						selected={option.value === props.selected}
 					>
 						{option.label}
 					</option>
